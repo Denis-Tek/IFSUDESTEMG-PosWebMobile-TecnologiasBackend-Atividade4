@@ -1,0 +1,21 @@
+doctype html
+head 
+    title Contato 
+body 
+    <center>
+    h1 Entre em contato conosco 
+    block content
+        form(action='/contato', method='post')
+            p Nome
+            input(type="text",     name="nome",   placeholder="Informe seu nome...", required)
+            p Email
+            input(type="email",    name="email",  placeholder="Informe seu e-mail...", required)
+            p Motivo do Contato
+            textarea(name="motivo", placeholder="Informe o motivo do seu contato", rows=10, cols=80, required)
+            p
+            button(type="submit")
+                | Enviar    
+    block foot
+      #footer
+        p
+        | Copyright 2021 Denis Pereira Raymundo | All Rights Reserved
